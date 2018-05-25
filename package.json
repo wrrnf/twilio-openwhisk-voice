@@ -1,0 +1,26 @@
+{
+  "name": "twilio-openwhisk-voice",
+  "version": "1.0.0",
+  "description": "Twilio voice call handler with OpenWhisk action",
+  "main": "handler.js",
+  "scripts": {
+    "postinstall": "npm link serverless-openwhisk"
+  },
+  "dependencies": {
+    "node-dig": "^1.0.1",
+    "npm": "^6.1.0",
+    "twilio": "^3.17.0"
+  },
+  "keywords": [
+    "serverless",
+    "openwhisk",
+    "twilio"
+  ],
+  "license": "MIT",
+  "author": "Warren Fung",
+  "homepage": "https://github.com/wrrnf/twilio-openwhisk-voice",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrrnf/twilio-openwhisk-voice.git"
+  }
+}

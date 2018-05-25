@@ -1,0 +1,24 @@
+service: twilio-openwhisk-voice
+
+provider:
+  name: openwhisk
+
+custom: 
+  credentials: ${file(credentials.yml)}
+
+functions:
+  inbound:
+    handler: handler.inbound
+    parameters:
+      twilio: ${self:custom.credentials.twilio}
+    annotations:
+      web-export: true
+  outbound:
+    handler: handler.outbound
+    parameters:
+      twilio: ${self:custom.credentials.twilio}
+    annotations:
+      web-export: true
+
+plugins:
+  - serverless-openwhisk
